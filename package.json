@@ -1,0 +1,36 @@
+{
+  "name": "fastify-queue",
+  "version": "1.0.0",
+  "description": "Sequential execution of methods in Fastify",
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "commonjs",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSainEyereg/fastify-queue.git"
+  },
+  "keywords": [
+    "fastify",
+    "queue",
+    "sequential"
+  ],
+  "author": "Oleg Logvinov (olejka.ru)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheSainEyereg/fastify-queue/issues"
+  },
+  "homepage": "https://github.com/TheSainEyereg/fastify-queue",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "fastify-plugin": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
