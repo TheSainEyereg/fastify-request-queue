@@ -1,5 +1,6 @@
 import { FastifyPluginAsync } from "fastify";
 import fp from "fastify-plugin";
+import { randomUUID } from "node:crypto";
 import EventEmitter from "node:events";
 
 declare module "fastify" {
@@ -13,7 +14,7 @@ const plugin: FastifyPluginAsync = async (app) => {
 	const event = new EventEmitter<{ "onShift": [id: string] }>();
 
 	app.addHook("onRequest", (req, reply, done) => {
-		req.queueId = `${Math.random().toString(36).slice(2)}${Date.now().toString(36)}`;
+		req.queueId = randomUUID();
 
 		const length = queue.push(req.queueId);
 
