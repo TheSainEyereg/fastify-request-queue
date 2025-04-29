@@ -18,8 +18,16 @@ const plugin: FastifyPluginAsync = async (app) => {
 
 		const length = queue.push(req.queueId);
 
-		if (length > 1)
-			return event.addListener("onShift", (id) => id === req.queueId && done());
+		if (length > 1) {
+			const callback = (id: string) => {
+				if (id === req.queueId) {
+					event.removeListener("onShift", callback);
+					done();
+				}
+			};
+
+			event.on("onShift", callback);
+		}
 
 		done();
 	});
