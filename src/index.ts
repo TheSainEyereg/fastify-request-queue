@@ -28,8 +28,8 @@ const plugin: FastifyPluginAsync = async (app) => {
 
 			event.on("onShift", callback);
 		}
-
-		done();
+		else
+			done();
 	});
 
 	app.addHook("onResponse", async (req) => {
