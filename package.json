@@ -1,6 +1,6 @@
 {
   "name": "fastify-request-queue",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Sequential execution of methods in Fastify",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
