@@ -1,6 +1,6 @@
 # fastify-request-queue
 
-A plugin for [Fastify](https://www.fastify.io/) that ensures methods are executed sequentially, preventing race conditions or overlapping executions in your routes. This is particularly useful for scenarios where order of operations matters, such as processing transactions or handling resource-intensive tasks.
+A plugin for [Fastify](https://www.fastify.io/) that ensures methods are executed sequentially, preventing race conditions or overlapping executions in your routes. This is particularly useful for scenarios where order of operations matters, such as processing transactions.
 
 ## Installation
 
@@ -53,7 +53,8 @@ app.register(fastifyRequestQueue, (app) => {
     });
 });
 
-app.listen({ port: 3000, host: '0.0.0.0' })
+app
+    .listen({ port: 3000, host: '0.0.0.0' })
     .then(at => console.log("Server started at", at));
 ```
 
