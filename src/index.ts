@@ -1,5 +1,4 @@
 import type { FastifyPluginAsync, FastifyRequest } from "fastify";
-import fp from "fastify-plugin";
 import { randomUUID } from "node:crypto";
 import EventEmitter from "node:events";
 
@@ -48,4 +47,4 @@ const plugin: FastifyPluginAsync = async (app) => {
 	app.addHook("onSend", async (req) => shift(req, true));
 };
 
-export default fp(plugin);
+export default plugin;
